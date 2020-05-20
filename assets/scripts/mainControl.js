@@ -34,15 +34,16 @@ cc.Class({
     //加载农作物
     onCrops(){
         let bg=cc.find("FarmBg",this.node);
-        let item=cc.instantiate(this.itemP);
 
-        let itemBox=cc.find("FarmBg/mapNew/item1",this.node);
-        let itemPos=itemBox.getPosition();
-        let pos=itemBox.getNodeToWorldTransformAR(itemPos);
-       
-        item.setPosition(pos.x,pos.y);
-        bg.addChild(item);
-       
+        for(let i=1;i<=12;i++){
+            let item=cc.instantiate(this.itemP);
+            let itemBox=cc.find("FarmBg/mapNew/item"+i,this.node);
+            let pos=  itemBox.convertToWorldSpaceAR(cc.v2(0, 0));
+            item.setPosition(pos.x,pos.y);
+            bg.addChild(item);
+        }
     }
+
+
 
 });
