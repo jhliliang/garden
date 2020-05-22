@@ -35,6 +35,7 @@ cc.Class({
     onCrops(){
         let bg=cc.find("FarmBg",this.node);
 
+        let n=cc.find("New1",this.node).color=cc.Color.RED;
         for(let i=1;i<=12;i++){
             let item=cc.instantiate(this.itemP);
             let itemBox=cc.find("FarmBg/mapNew/item"+i,this.node);
