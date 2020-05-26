@@ -33,6 +33,24 @@ cc.Class({
 
     //加载农作物
     onCrops(){
+        //获取用户数据
+
+        let data=[
+
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+        ]
+
+
         let bg=cc.find("FarmBg",this.node);
         for(let i=1;i<=12;i++){
             let item=cc.instantiate(this.itemP);
